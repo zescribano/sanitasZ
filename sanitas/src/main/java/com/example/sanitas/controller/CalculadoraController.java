@@ -5,16 +5,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.sanitas.dto.CalculadoraDTO;
-import com.example.sanitas.services.CalculadoraServices;
+import com.example.sanitas.service.CalculadoraService;
 
 @Controller
 public class CalculadoraController {
 	
 	@Autowired
-	CalculadoraServices calculadoraServices;
+	private CalculadoraService calculadoraService;
 
 	@GetMapping(value = { "/calculadora" })
 	public Double calcular(CalculadoraDTO calculo) {
-		return calculadoraServices.calcular(calculo);
+		return calculadoraService.calcular(calculo);
 	}
 }

@@ -12,8 +12,6 @@ public class SanitasApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext cts = SpringApplication.run(SanitasApplication.class, args);
-
-		// Creamos el bean del controlador para llamar al servivio
 		CalculadoraController calculadoraController = cts.getBean(CalculadoraController.class);
 
 		// Creamos el DTO que tendra los parametros de entrada del servicio
